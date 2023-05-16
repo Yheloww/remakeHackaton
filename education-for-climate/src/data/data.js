@@ -1,0 +1,21 @@
+export default [
+    {name:"Antonio", hours: 44, grade : 50},
+    {name:"Sai", hours: 60, grade : 99},
+    {name:"Antonio", hours: 23, grade : 50},
+    {name:"Antonio", hours: 15, grade : 34},
+    {name:"Antonio", hours: 10, grade : 20},
+    {name:"Antonio", hours: 25, grade : 65},
+    {name:"Antonio", hours: 46, grade : 35},
+    {name:"Antonio", hours: 30, grade : 30},
+    {name:"Antonio", hours: 8, grade : 10},
+    {name:"Antonio", hours: 35, grade : 79},
+    {name:"Antonio", hours: 52, grade : 65},
+    {name:"Antonio", hours: 39, grade : 50},
+    {name:"Antonio", hours: 16, grade : 30},
+    {name:"Antonio", hours: 30, grade : 53},
+    {name:"Antonio", hours: 40, grade : 56},
+    {name:"Antonio", hours: 45, grade : 75},
+    {name:"Antonio", hours: 14, grade : 49},
+    {name:"Antonio", hours: 23, grade : 59},
+
+]
