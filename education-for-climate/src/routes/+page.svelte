@@ -9,17 +9,21 @@
 
     const xScale = d3.scaleLinear()
     .domain([0,100])
-    .range([0,200]);
+    .range([0,width/4]);
 
 </script>
-
-<svg {height} {width}>
-    {#each data as circle}
-    <circle cx="250" cy="250" r={xScale(circle.pourcentage)} fill="none" stroke="black"/>
-    {/each}
-</svg>
+<div class="container" bind:clientWidth={width} bind:clientHeight={height}>
+    <svg {height} {width}>
+        {#each data as circle}
+        <circle cx={width/2} cy=400 r={xScale(circle.pourcentage)} fill="none" stroke="black"/>
+        {/each}
+    </svg>
+</div>
 
 
 <style>
+    .container {
+        margin: 0 auto;
+    }
    
 </style>
