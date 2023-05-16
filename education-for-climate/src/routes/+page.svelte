@@ -12,7 +12,7 @@
     .range([0,width/4]);
 
 </script>
-<div class="container" bind:clientWidth={width} bind:clientHeight={height}>
+<div class="container" bind:clientWidth={width}>
     <svg {height} {width}>
         {#each data as circle}
         <circle cx={width/2} cy=400 r={xScale(circle.pourcentage)} fill="none" stroke="black"/>
