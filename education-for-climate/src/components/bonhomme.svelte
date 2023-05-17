@@ -17,14 +17,6 @@
 
 
 <style>
-    section{
-        border: 3px solid aquamarine;
-        margin: 50px;
-    }
-    
-    div {
-        border: 5px solid red;
-    }
     
     .section {
         display: flex;

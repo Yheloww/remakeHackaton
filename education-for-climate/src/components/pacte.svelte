@@ -19,14 +19,7 @@
 </section>
 
 <style>
-    section{
-        border: 3px solid aquamarine;
-        margin: 50px;
-    }
-    
-    div {
-        border: 5px solid red;
-    }
+
     
     #pacte-txt {
         margin-left: 35%;

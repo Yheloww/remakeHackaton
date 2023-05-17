@@ -14,10 +14,10 @@
 </section>
 
 <style>
-    section{
-        border: 3px solid aquamarine;
-        margin: 50px;
-    }
+   
+   :global(div){
+        border: 2px solid aquamarine;
+   }
     .center {
         margin: 20px;
         display: flex;
@@ -29,8 +29,5 @@
     #chapeau {
         margin-left: 25%;
     }
-    
-    div {
-        border: 5px solid red;
-    }
+
     </style>

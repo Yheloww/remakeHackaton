@@ -14,10 +14,7 @@
 
 
 <style>
-    section{
-        border: 3px solid aquamarine;
-        margin: 50px;
-    }
+
     .center {
         margin: 20px;
         display: flex;
@@ -25,11 +22,6 @@
         flex-direction: column;
         align-items: center;
     }
-    
-    div {
-        border: 5px solid red;
-    }
-    
     .section {
         display: flex;
         justify-content:space-evenly;
