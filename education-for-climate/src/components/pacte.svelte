@@ -1,0 +1,53 @@
+
+<section id="pacte">
+    <div class="backgound-img">
+        <div id="pacte-img">
+            <img src="/images/txt-document.svg" alt="pacte" width="250%" id="img-pacte"/>
+        </div>
+        <div id="pacte-txt">
+            <h1>
+                Commission européenne : 
+                Le pacte vert pour l'Europe
+            </h1>
+            <div>
+                <p>
+                    Scrolly text
+                </p>
+            </div> 
+        </div>
+    </div>
+</section>
+
+<style>
+    section{
+        border: 3px solid aquamarine;
+        margin: 50px;
+    }
+    
+    div {
+        border: 5px solid red;
+    }
+    
+    #pacte-txt {
+        margin-left: 35%;
+        position: relative;
+        z-index:100;
+    }
+    
+    #pacte {
+        position:relative;
+        height: 1000px;
+    }
+    
+    #pacte-img {
+        display: block;
+        position:absolute;
+        z-index: -100;
+        margin-top: 100;
+    }
+    
+    #img-pacte {
+        transform: rotate(-50deg);
+        opacity: 0.5;
+    }
+    </style>
