@@ -1,3 +1,15 @@
+<script>
+
+    window.onscroll = function() {
+            var theta = document.documentElement.scrollTop / 50 % Math.PI;
+
+    document.getElementById('terre')
+    .style.transform ="rotate(" + window.pageYOffset/4 + "deg)";
+    }
+</script>
+
+
+
 <section id="Premier">
     <div class="center" id="entete">
         <img src="/images/hacktualite.svg" alt="hacktualité" width="25%"/>
