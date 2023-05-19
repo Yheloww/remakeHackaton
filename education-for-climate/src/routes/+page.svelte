@@ -31,8 +31,6 @@
 
 <Solution/>
 
-<BonhomeTest/>
-
 <div id="footer">
     <img id="footer" src="/images/titre_footer-01.svg" alt="différence ue unif" width="100%"/>
 </div>

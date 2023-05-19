@@ -36,6 +36,9 @@ let steps = [
 
 
 <style>
+    section {
+        margin-bottom: 10%;
+    }
     
     .section {
         display: flex;

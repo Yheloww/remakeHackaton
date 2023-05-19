@@ -1,11 +1,16 @@
 <script>
 
-    // window.onscroll = function() {
-    //         var theta = document.documentElement.scrollTop / 50 % Math.PI;
+import { onMount } from "svelte";
 
-    // document.getElementById('terre')
-    // .style.transform ="rotate(" + window.pageYOffset/4 + "deg)";
-    // }
+onMount(() => {
+    window.onscroll = function() {
+            var theta = document.documentElement.scrollTop / 50 % Math.PI;
+
+    document.getElementById('terre')
+    .style.transform ="rotate(" + window.pageYOffset/6.1 + "deg)";
+    }
+})
+
 </script>
 
 
@@ -21,7 +26,7 @@
         <p id="text-chapeau" class="txt-princi">Malgré l'urgence climatique à laquelle nous sommes confrontés, les universités et hautes écoles belges semblent ne pas accorder suffisamment d'importance à la formation sur le climat. En effet, peu de cours spécifiques sont proposés aux étudiants pour leur permettre de comprendre les enjeux environnementaux actuels et d’entrer dans une nouvelle génération de professionnels avertis. Dans cet article, nous vous amenons à constater le manque cruel de présence de cours sur le climat dans l’enseignement supérieur belge. </p>
     </div>
     <div class="center" id="terre">
-        <img src="/images/planete.svg" alt="planète terre" width="30%"/>
+        <img src="/images/planete.svg" alt="planète terre" width="35%"/>
     </div>
 </section>
 
@@ -47,6 +52,11 @@
         margin-bottom: 0%;
     }
 
+    #terre {
+        position: absolute;
+        margin: 0 auto;
+        width: 100%;
+    }
 
 
     </style>

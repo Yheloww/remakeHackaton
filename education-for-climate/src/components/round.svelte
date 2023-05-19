@@ -4,6 +4,7 @@
     import { tweened } from "svelte/motion";
     import { cubicOut, elasticOut } from 'svelte/easing';
     import {fade, fly} from 'svelte/transition';
+  import { each } from 'svelte/internal';
 
     let width = 1000;
     let height = 1000;
@@ -86,13 +87,27 @@
 </script>
 
 <svelte:window bind:innerHeight={height} bind:innerWidth={width}/>
-<section  style="width={width}; height:{height}">
+<section  style="width={width}; height:{height}" class="test">
     <h1 class="center">Dans quelle région les universités et hautes écoles proposent-elles la plus grande poportion de cours traitant des enjeux climatiques ?</h1>
     <div class="bnt-region section">
         <button class="btn-1" on:click={step1}><span>Bruxelles</span></button>
         <button class="btn-2" on:click={step2}><span>Wallonie</span></button>
         <button class="btn-3" on:click={step3}><span>Flandre</span></button>
         <button class="btn-4" on:click={step4}><span>total</span></button>
+    </div>
+    <div class="raltive-p">
+        {#if WalSticker}
+        <img class="wallonie" width="10%" src="/images/wallonie-08.svg" alt ="wallonie"transition:custom= {{}}/>
+        {/if}
+        {#if FlaSticker}
+    >   <img class="flandre" width="10%" src="/images/flandre-09.svg" alt ="wallonie"transition:custom= {{}}/>
+        {/if}
+        {#if totalText}
+        <p class="total" transition:custom= {{}}>Ce cercle vert correspond à 100% des cours</p>
+        {/if}
+        {#if BxlSticker}
+        <img class="bruxelles" width="10%" src="/images/bruxelles-07.svg" alt ="wallonie"transition:custom= {{}}/>
+        {/if}
     </div>
     <div class="container">
         <svg width={width} height={plotH}>
@@ -105,71 +120,18 @@
                 stroke={ $tweenedX[index] >= 100 ? "green" : "black"}
                 stroke-width={ $tweenedX[index] > 118 ? "0px" : "3px"}
                 transition:fade={{duration : 600}}/>
-                {#if WalSticker}
-                <rect class="sticker" 
-                      x={width/4} 
-                      y={(plotH/2) - 25} 
-                      width="100" 
-                      height="50" 
-                      fill="green"
-                      transition:custom= {{}}/>
-                {/if}
-                {#if FlaSticker}
-                <rect class="sticker" 
-                      x={(width/4) + (width/5) * 2 } 
-                      y={(plotH/2) - 25} 
-                      width="100" 
-                      height="50" 
-                      fill="green"
-                      transition:custom= {{ duration : 600}}/>
-                {/if}
-                {#if totalText}
-                <rect class="sticker" 
-                      x={(width/2) - 50} 
-                      y={((plotH/4)*3) - 50} 
-                      width="100" 
-                      height="50" 
-                      fill="green"
-                      transition:custom= {{ duration : 600}}/>
-                {/if}
-                {#if BxlSticker}
-                <rect class="sticker" 
-                      x={(width/4)*3 - (width/100)*15} 
-                      y={(plotH/4) + 25} 
-                      width="100" 
-                      height="50" 
-                      fill="green"
-                      transition:custom= {{ duration : 600}}/>
-                {/if}
             {/each}
-            
-        </svg>
     </div>
 </section>
 
 
-
-
-<!-- Html base
-<section id="round">
-    <h1 class="center">Dans quelle région les universités et hautes écoles proposent-elles la plus grande poportion de cours traitant des enjeux climatiques ?</h1>
-    <div class="bnt-region section">
-        <button id="bruxelles">Bruxelles</button>
-        <button id="flandres">Flandre</button>
-        <button id="wallonie">Wallonie</button>
-    </div>
-    <div id="rond-graphique">
-        <svg width="500" height="500">
-            <circle cx=250 cy=250 r=25/>
-        </svg>
-    </div>
-</section> -->
-
-
 <style>
-
+    .raltive-p {
+        position: relative;
+    }
+    
     .center {
-        margin: 20px;
+        margin: 10px;
         display: flex;
         justify-content: center;
         flex-direction: column;
@@ -205,5 +167,31 @@
     button:hover {
         background-color: #048D14;
         color: white;
+    }
+
+    .bruxelles {
+        position: absolute;
+        top: 20vh;
+        left: 60vw;
+    }
+    
+    .wallonie {
+        position: absolute;
+        top: 30vh;
+        left: 32vw;
+    }
+    .flandre {
+        position: absolute;
+        top: 32vh;
+        left: 60vw;
+    }
+
+    .total {
+        position: absolute;
+        top: 50vh;
+        left: 40.5vw;
+        text-align: center;
+        width: 20%;
+      
     }
     </style>

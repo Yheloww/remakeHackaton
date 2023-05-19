@@ -73,6 +73,9 @@ function handleClick() {
         margin-top: 5%;
         margin-bottom: 5%;
     }
+    .section {
+      margin-top: 39%;
+    }
 
     .input-section{
         margin-top: 2%;
