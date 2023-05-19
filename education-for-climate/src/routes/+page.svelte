@@ -12,6 +12,7 @@
     import DifferenceHe from '../components/differenceHE.svelte';
     import Fleche from '../components/fleche.svelte';
     import Solution from '../components/solution.svelte';
+    import BonhomeTest from '../components/bonhome-test.svelte';
 </script>
 
 <Chapeau/>
@@ -29,6 +30,8 @@
 <Fleche/>
 
 <Solution/>
+
+<BonhomeTest/>
 
 <div id="footer">
     <img id="footer" src="/images/titre_footer-01.svg" alt="différence ue unif" width="100%"/>
