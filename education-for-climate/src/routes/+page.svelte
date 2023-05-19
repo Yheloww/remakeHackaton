@@ -38,7 +38,6 @@
 </div>
 <style>
     :global(section){
-    border: 2px solid aquamarine;
     margin-bottom: 10%;
 }
 

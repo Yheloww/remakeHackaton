@@ -7,26 +7,30 @@
         "",
         ""
     ]
+    function custom(node, params) {
+            return {
+            css: (t,u) => `transform: rotate(${u * 0.5}deg); opacity: ${t * 30}%`
+        }}
 </script>
 
 
 
 
 <section id="flech">
-    <div class="img-fleche center chart">
-        <img src="/images/fleche2-14.svg" alt="fleche" width="50%" id="graphique-HE-U"/>
-        <div class="text">
-            <p class="base">L’asbl The Shifters Belgium, qui promeut l’éducation sur le climat dans l’enseignement supérieur belge, a mené en 2022 une enquête auprès de 600 étudiants. 87% de ceux-ci pensent que « les universités belges doivent dispenser des modules d’enseignement sur le changement climatique ». </p>
-            {#if currentStep >= 1}
-            <h1 transition:fly="{{ x: -500, duration: 2000 }}" class="big base"> 87% </h1>
-            {:else}
-            <h1 class="big base transparent"> 87% </h1>
-            {/if}
-
-          
-        </div>
-      
-    </div>
+  <div class="chart">
+    <div class="img-fleche center">
+      <img  transition:custom= {{ duration : 600}} src="/images/fleche.svg" alt="fleche" width="35%" id="fleche-img"/>
+      <img src="/images/demi-rond.svg" alt="fleche" width="50%" id="graphique-HE-U"/>
+     </div>
+      <div class="text">
+          <p class="base">L’asbl The Shifters Belgium, qui promeut l’éducation sur le climat dans l’enseignement supérieur belge, a mené en 2022 une enquête auprès de 600 étudiants. 87% de ceux-ci pensent que « les universités belges doivent dispenser des modules d’enseignement sur le changement climatique ». </p>
+          {#if currentStep >= 1}
+          <h1 transition:fly="{{ x: -500, duration: 2000 }}" class="big base"> 87% </h1>
+          {:else}
+          <h1 class="big base transparent"> 87% </h1>
+          {/if} 
+      </div>
+  </div>
     <div class="fleche-text center">
         <Scroll bind:value={currentStep}>
             {#each steps as text, i}
@@ -38,8 +42,7 @@
             {/each}
         </Scroll>
     </div>
-</section>
-
+  </section>
 
 <style>
 
@@ -49,16 +52,6 @@
         justify-content: center;
         flex-direction: column;
         align-items: center;
-    }
-
-    div {
-        border: 2px solid red;
-    }
-    .section {
-        display: flex;
-        justify-content:space-evenly;
-        flex-direction: column;
-        align-items: top;
     }
 
     .step {
@@ -85,6 +78,7 @@
     z-index: -100;
     display: flex;
     justify-content: space-evenly;
+    flex-direction: column;
   }
 
   .text {
@@ -97,6 +91,7 @@
 
   .base {
     flex-basis: 30%;
+  
   }
 
   h1 {
@@ -110,5 +105,16 @@
 
   .transparent {
     opacity: 0;
+  }
+  #graphique-HE-U{
+    position: absolute;
+  }
+
+  #fleche-img {
+    translate: -250px 325px;
+    rotate: 0deg;
+    margin-bottom: 300px;
+    transform-origin: 530px 85px;
+
   }
     </style>

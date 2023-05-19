@@ -89,10 +89,10 @@
 <section  style="width={width}; height:{height}">
     <h1 class="center">Dans quelle région les universités et hautes écoles proposent-elles la plus grande poportion de cours traitant des enjeux climatiques ?</h1>
     <div class="bnt-region section">
-        <button class="btn-1" on:click={step1}>bruxelles</button>
-        <button class="btn-2" on:click={step2}>Wallonie</button>
-        <button class="btn-3" on:click={step3}>Flandre</button>
-        <button class="btn-4" on:click={step4}>Total</button>
+        <button class="btn-1" on:click={step1}><span>Bruxelles</span></button>
+        <button class="btn-2" on:click={step2}><span>Wallonie</span></button>
+        <button class="btn-3" on:click={step3}><span>Flandre</span></button>
+        <button class="btn-4" on:click={step4}><span>total</span></button>
     </div>
     <div class="container">
         <svg width={width} height={plotH}>
@@ -174,13 +174,36 @@
         justify-content: center;
         flex-direction: column;
         align-items: center;
-        width: 50%;
+        width: 75%;
         margin: 0 auto;
     }
     .section {
         display: flex;
-        justify-content:space-evenly;
+        justify-content:center;
         flex-direction: row;
         align-items: top;
+    }
+    button {
+        margin-left: 30px;
+        margin-right: 30px;
+        margin-top: 1%;
+        font-size: medium;
+        font-family: 'Avara-black';
+        text-transform: uppercase;
+        padding: 5px;
+        background-color: white;
+        border: 3px solid #048D14;
+        color: #048D14;
+        transform: skew(5deg);
+        text-decoration: none;
+    }
+    
+    button > span {
+        display: inline-block;
+        transform: skew(-5deg);
+    }
+    button:hover {
+        background-color: #048D14;
+        color: white;
     }
     </style>

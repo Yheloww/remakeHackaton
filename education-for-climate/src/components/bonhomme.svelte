@@ -37,9 +37,6 @@ let steps = [
 
 <style>
     
-    div {
-        border: 2px solid red;
-    }
     .section {
         display: flex;
         justify-content:space-evenly;
