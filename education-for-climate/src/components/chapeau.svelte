@@ -17,10 +17,10 @@ onMount(() => {
 
 <section id="Premier">
     <div class="center" id="entete">
-        <img src="/images/hacktualite.svg" alt="hacktualité" width="10%"/>
+        <img src="./images/hacktualite.svg" alt="hacktualité" width="10%"/>
     </div>
     <div class="not-center" id="chapeau">
-        <img src="/images/titre_footer-02.svg" alt="changement scolaire pas climatique" width="75%"/>
+        <img src="./images/titre_footer-02.svg" alt="changement scolaire pas climatique" width="75%"/>
     </div>
     <div class="texter">
         <p id="text-chapeau" class="txt-princi">Malgré l'urgence climatique à laquelle nous sommes confrontés, les universités et hautes écoles belges semblent ne pas accorder suffisamment d'importance à la formation sur le climat. En effet, peu de cours spécifiques sont proposés aux étudiants pour leur permettre de comprendre les enjeux environnementaux actuels et d’entrer dans une nouvelle génération de professionnels avertis. Dans cet article, nous vous amenons à constater le manque cruel de présence de cours sur le climat dans l’enseignement supérieur belge. </p>

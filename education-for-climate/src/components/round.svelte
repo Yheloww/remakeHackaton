@@ -97,16 +97,16 @@
     </div>
     <div class="raltive-p">
         {#if WalSticker}
-        <img class="wallonie" width="10%" src="/images/wallonie-08.svg" alt ="wallonie"transition:custom= {{}}/>
+        <img class="wallonie" width="10%" src="./images/wallonie-08.svg" alt ="wallonie"transition:custom= {{}}/>
         {/if}
         {#if FlaSticker}
-    >   <img class="flandre" width="10%" src="/images/flandre-09.svg" alt ="wallonie"transition:custom= {{}}/>
+    >   <img class="flandre" width="10%" src="./images/flandre-09.svg" alt ="wallonie"transition:custom= {{}}/>
         {/if}
         {#if totalText}
         <p class="total" transition:custom= {{}}>Ce cercle vert correspond à 100% des cours</p>
         {/if}
         {#if BxlSticker}
-        <img class="bruxelles" width="10%" src="/images/bruxelles-07.svg" alt ="wallonie"transition:custom= {{}}/>
+        <img class="bruxelles" width="10%" src="./images/bruxelles-07.svg" alt ="wallonie"transition:custom= {{}}/>
         {/if}
     </div>
     <div class="container">

@@ -19,8 +19,8 @@
 <section id="flech">
   <div class="chart">
     <div class="img-fleche center">
-      <img  transition:custom= {{ duration : 600}} src="/images/fleche.svg" alt="fleche" width="35%" id="fleche-img"/>
-      <img src="/images/demi-rond.svg" alt="fleche" width="50%" id="graphique-HE-U"/>
+      <img  transition:custom= {{ duration : 600}} src="./images/fleche.svg" alt="fleche" width="35%" id="fleche-img"/>
+      <img src="./images/demi-rond.svg" alt="fleche" width="50%" id="graphique-HE-U"/>
      </div>
       <div class="text">
           <p class="base">L’asbl The Shifters Belgium, qui promeut l’éducation sur le climat dans l’enseignement supérieur belge, a mené en 2022 une enquête auprès de 600 étudiants. 87% de ceux-ci pensent que « les universités belges doivent dispenser des modules d’enseignement sur le changement climatique ». </p>

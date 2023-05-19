@@ -19,7 +19,7 @@
                 Le pacte vert pour l'Europe
             </h1>
         </div>
-        <img id="img-pacte" src="/images/pacte.svg" alt="pacte" width="75%"/>
+        <img id="img-pacte" src="./images/pacte.svg" alt="pacte" width="75%"/>
     </div>
       <Scroll bind:value={currentStep}>
           {#each steps as text, i}

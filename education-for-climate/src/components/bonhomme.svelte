@@ -19,7 +19,7 @@ let steps = [
             <h1>
                 pourcentage de population active
             </h1>
-            <img src="/images/bonhomme_tous-12.svg" alt="pacte" width="27%" />
+            <img src="./images/bonhomme_tous-12.svg" alt="pacte" width="27%" />
     </div>
     <div>
         <Scroll bind:value={currentStep}>

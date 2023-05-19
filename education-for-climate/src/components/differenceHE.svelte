@@ -8,14 +8,14 @@
     let animate2=false
     
     function HE() {
-        src = "/images/hauteecole-11.svg";
+        src = "./images/hauteecole-11.svg";
         txt = "Et non… Ce sont en fait les universités qui arrivent largement en tête. ";
         infos = "… contre 31% seulement par des hautes écoles ";
         animate=true;
         animate2=false;
     }
     function unif() {
-        src = "/images/université-10.svg"
+        src = "./images/université-10.svg"
         txt="Tout à fait ! Les universités arrivent largement en tête. "
         infos = "Si l’on s’intéresse à l’ensemble des cours qui traitent des enjeux climatiques en Belgique, on s’aperçoit que 69% sont dispensés par des universités… ";
         animate2=true;

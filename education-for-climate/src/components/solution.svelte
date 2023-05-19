@@ -6,15 +6,15 @@
     </div>
     <div id="bottom-solution" class="section">
         <div id="left-solution" class="third-section">
-            <img src="/images/solution1-15.svg" alt="différence ue unif" width="100%" id="graphique-HE-U"/>
+            <img src="./images/solution1-15.svg" alt="différence ue unif" width="100%" id="graphique-HE-U"/>
             <p>actuellement, seulement 12% des professeurs d’université et 7% des professeurs des hautes écoles ont une expérience d’enseignement sur les enjeux climatiques et environnementaux. </p>
         </div>
         <div id="center-solution" class="third-section">
-            <img src="/images/solution2-16.svg" alt="différence ue unif" width="100%" id="graphique-HE-U"/>
+            <img src="./images/solution2-16.svg" alt="différence ue unif" width="100%" id="graphique-HE-U"/>
             <p>ces derniers travailleraient en collaboration avec les professeurs et les établissements d’enseignement supérieur dans le but de transformer les programmes de cours.</p>
         </div>
         <div id="right-solution" class="third-section">
-            <img src="/images/solution3-17.svg" alt="différence ue unif" width="100%" id="graphique-HE-U"/>
+            <img src="./images/solution3-17.svg" alt="différence ue unif" width="100%" id="graphique-HE-U"/>
             <p>ceux-ci permettraient d’évaluer les progrès de la transformation des programmes ainsi que d’assurer la publicité de ces formations. </p>
         </div>
     </div>
