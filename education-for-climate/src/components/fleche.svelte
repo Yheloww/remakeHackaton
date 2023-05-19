@@ -76,7 +76,7 @@
       }
 
     .chart {
-    background: whitesmoke;
+    background: #F9F8F4;
     width: 100%;
     height: 100%;
     position: sticky;

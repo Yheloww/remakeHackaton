@@ -19,7 +19,7 @@
                 Le pacte vert pour l'Europe
             </h1>
         </div>
-        <img id="img-pacte" src="/images/txt-document.svg" alt="pacte" width="50%"/>
+        <img id="img-pacte" src="/images/pacte.svg" alt="pacte" width="75%"/>
     </div>
       <Scroll bind:value={currentStep}>
           {#each steps as text, i}
@@ -38,7 +38,7 @@
   
   <style>
       :global(body) {
-          background: whitesmoke;
+          background: #F9F8F4;
       }
     /* div{
       border: 1px solid red;
@@ -53,7 +53,7 @@
     }
   
     .step-content {
-      background: whitesmoke;
+      background: #F9F8F4;
       color: #ccc;
       padding: .5rem 1rem;
       transition: background 500ms ease, color 500ms ease;
@@ -68,7 +68,7 @@
       }
 
       .chart {
-    background: whitesmoke;
+    background: #F9F8F4;
     width: 100%;
     height: 100%;
     position: sticky;
@@ -77,7 +77,7 @@
     z-index: -100;
   }
   #img-pacte {
-        transform: rotate(-50deg) translate(100px,-10px);
+        transform: rotate(-5deg) translate(0,-100px);
         opacity: 0.5;
 }
 

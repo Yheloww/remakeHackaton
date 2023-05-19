@@ -57,7 +57,7 @@ let steps = [
     }
   
     .step-content {
-      background: whitesmoke;
+      background: #F9F8F4;
       color: #ccc;
       padding: .5rem 1rem;
       transition: background 500ms ease, color 500ms ease;
@@ -72,7 +72,7 @@ let steps = [
       }
 
     .chart {
-    background: whitesmoke;
+    background: #F9F8F4;
     width: 100%;
     height: 100%;
     position: sticky;

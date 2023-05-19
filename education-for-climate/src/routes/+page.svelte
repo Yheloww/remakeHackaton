@@ -31,11 +31,11 @@
 <Solution/>
 
 <div id="footer">
-    <img src="/images/footer.svg" alt="différence ue unif" width="25%"/>
+    <img id="footer" src="/images/titre_footer-01.svg" alt="différence ue unif" width="100%"/>
 </div>
 <style>
 
 #footer {
-    margin:0;
+    margin:0 auto;
 }
 </style>

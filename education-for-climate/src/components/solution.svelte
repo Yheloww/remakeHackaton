@@ -19,9 +19,9 @@
         </div>
     </div>
     <div class="final-text center">
-        <p> Au vu de l’urgence climatique actuelle, il est impératif que les institutions de l'enseignement supérieur qui n’ont pas ou très peu de propositions de cours sur le climat prennent leurs responsabilités et proposent des cours de qualité sur le sujet.
+        <p class="conclusion"> Au vu de l’urgence climatique actuelle, il est impératif que les institutions de l'enseignement supérieur qui n’ont pas ou très peu de propositions de cours sur le climat prennent leurs responsabilités et proposent des cours de qualité sur le sujet.
             Il est inquiétant de constater que les universités et hautes écoles belges sont en retard sur la question environnementale et climatique. Les étudiants doivent être formés pour devenir des citoyens engagés et conscients de l'impact de leurs choix sur l'environnement et le climat. Il est donc crucial que des modifications soient faites au niveau de l’éducation belge pour le climat afin de répondre aux besoins des étudiants et de la demande sociétale. Les futures générations en dépendent.
-            </p>
+        </p>
     </div>
 </section>
 
@@ -60,5 +60,9 @@
     .final-text {
         width: 50%;
         margin-left: 10%;
+    }
+
+    .conclusion {
+        font-size: 1.5rem;
     }
     </style>
