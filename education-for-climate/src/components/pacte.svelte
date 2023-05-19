@@ -2,7 +2,7 @@
 <section id="pacte">
     <div class="backgound-img">
         <div id="pacte-img">
-            <img src="/images/txt-document.svg" alt="pacte" width="250%" id="img-pacte"/>
+            <img src="/images/txt-document.svg" alt="pacte" width="200%" id="img-pacte"/>
         </div>
         <div id="pacte-txt">
             <h1>
@@ -29,14 +29,14 @@
     
     #pacte {
         position:relative;
-        height: 1000px;
+        height: 750px;
     }
     
     #pacte-img {
         display: block;
         position:absolute;
         z-index: -100;
-        margin-top: 100;
+        
     }
     
     #img-pacte {

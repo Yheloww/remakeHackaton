@@ -27,8 +27,9 @@
 
 <style>
    
-   :global(div){
+   :global(section){
         border: 2px solid aquamarine;
+        margin-bottom: 10%;
    }
     .center {
         margin: 20px;

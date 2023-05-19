@@ -8,7 +8,7 @@
     </div>
     <div id="Q2-right-section" class="half-section">
         <h1>
-            Quel pourcentage de cours ?
+            Quel pourcentage de cours dans les universités et hautes écoles belges traite des enjeux climatiques?
         </h1>
 
         <input type="range" min="1" max="100" value="50" class="slider" id="courseRange">

@@ -1,4 +1,35 @@
 
-div {
-    border: 3px solid red;
+body {
+    background-color: #F9F8F4;
+}
+
+
+@font-face{
+    font-family: "LunchType_Medium_Expanded";
+    src : url(/fonts/Lunchtype24-Medium-Expanded.ttf);
+}
+
+@font-face{
+    font-family: "LunchType_Regular_Expanded";
+    src : url(/fonts/Lunchtype24-Regular-Expanded.ttf);
+}
+@font-face{
+    font-family: "Avara-black";
+    src : url(/fonts/Avara-Black.ttf);
+}
+
+h1 {
+    font-family: "LunchType_Regular_Expanded";
+    text-transform: uppercase;
+    font-size:2rem;
+}
+
+p{
+    font-family: "LunchType_Medium_Expanded";
+}
+
+.big {
+    font-family: "Avara-black";
+    font-size: 10rem;
+    color:  #048D14;
 }
