@@ -174,6 +174,8 @@
         justify-content: center;
         flex-direction: column;
         align-items: center;
+        width: 50%;
+        margin: 0 auto;
     }
     .section {
         display: flex;

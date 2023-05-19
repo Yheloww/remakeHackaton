@@ -34,6 +34,10 @@
     <img id="footer" src="/images/titre_footer-01.svg" alt="différence ue unif" width="100%"/>
 </div>
 <style>
+    :global(section){
+    border: 2px solid aquamarine;
+    margin-bottom: 10%;
+}
 
 #footer {
     margin:0 auto;

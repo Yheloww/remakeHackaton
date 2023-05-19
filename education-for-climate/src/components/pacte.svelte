@@ -84,8 +84,8 @@
     .title {
         display: flex;
         justify-content: center;
-        margin-left: 35%;
-        width: 35%;
+        margin-left: 40%;
+        width: 40%;
 
     }
   </style>
