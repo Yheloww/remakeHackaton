@@ -26,10 +26,12 @@ h1 {
 
 p{
     font-family: "LunchType_Medium_Expanded";
+    font-size: 1.25rem;
 }
 
 .big {
     font-family: "Avara-black";
     font-size: 10rem;
     color:  #048D14;
+    margin: 0px 0px 0px 0px;
 }

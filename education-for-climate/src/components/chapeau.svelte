@@ -1,11 +1,11 @@
 <script>
 
-    window.onscroll = function() {
-            var theta = document.documentElement.scrollTop / 50 % Math.PI;
+    // window.onscroll = function() {
+    //         var theta = document.documentElement.scrollTop / 50 % Math.PI;
 
-    document.getElementById('terre')
-    .style.transform ="rotate(" + window.pageYOffset/4 + "deg)";
-    }
+    // document.getElementById('terre')
+    // .style.transform ="rotate(" + window.pageYOffset/4 + "deg)";
+    // }
 </script>
 
 
