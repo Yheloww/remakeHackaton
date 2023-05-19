@@ -4,16 +4,22 @@
     let src;
     let txt = "";
     let infos= "";
+    let animate= false;
+    let animate2=false
     
     function HE() {
         src = "/images/hauteecole-11.svg";
         txt = "Et non… Ce sont en fait les universités qui arrivent largement en tête. ";
         infos = "… contre 31% seulement par des hautes écoles ";
+        animate=true;
+        animate2=false;
     }
     function unif() {
         src = "/images/université-10.svg"
         txt="Tout à fait ! Les universités arrivent largement en tête. "
         infos = "Si l’on s’intéresse à l’ensemble des cours qui traitent des enjeux climatiques en Belgique, on s’aperçoit que 69% sont dispensés par des universités… ";
+        animate2=true;
+        animate=false;
     }
 
 </script>
@@ -32,10 +38,18 @@
                 <button class="HE-btn"on:click={HE}><span>Haute-ecole</span></button>
                 <button on:click={unif} ><span>Universités</span></button>
             </div>
-            <p> {txt} <br/> {infos}</p>
+            {#if animate}
+            <p in:fade={{duration :800}}> {txt} <br/> {infos}</p>
+            {:else if animate2}
+            <p in:fade={{duration :800}}> {txt} <br/> {infos}</p>
+            {/if}
         </div>
         <div id="right-bottom" class="half-section">
-            <img   transition:fade={{duration : 600}} {src} alt="" width="100%" id="graphique-HE-U" />
+            {#if animate }
+            <img   in:fade={{duration : 800}} {src} alt="" width="100%" id="graphique-HE-U" />
+            {:else if animate2}
+            <img   in:fade={{duration : 800}} {src} alt="" width="100%" id="graphique-HE-U" />
+            {/if}
         </div>
     </div>
 </section>
@@ -92,6 +106,11 @@
 
     .HE-btn {
         margin-right: 5%;
+    }
+
+    p {
+        margin-left: 10%;
+        margin-top: 15%;
     }
 
     </style>
