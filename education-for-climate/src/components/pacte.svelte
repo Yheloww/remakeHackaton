@@ -7,7 +7,7 @@
                    "Le pacte insiste notamment sur l’importance de l’enseignement pour effectuer cette transition.", 
                    "En effet, si l’on souhaite comprendre les causes du changement climatique et mettre en place des solutions pour le combattre, il est nécessaire de développer des compétences nouvelles dans tous les domaines. Cela passe notamment par les hautes écoles et les universités.",
                    "Pourtant, en Belgique, on est loin de répondre à cet objectif…",
-                  "/images/loi.svg"];
+                  "./images/loi.svg"];
   </script>
   
   <section>

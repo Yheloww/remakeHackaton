@@ -1,6 +1,37 @@
 <script>
 import Scroll from "./Scrolly.svelte";
 import { fly } from "svelte/transition";
+import {pathBonhomme} from "../components/path.js";
+import * as d3 from 'd3'
+import { onMount } from "svelte";
+  import { each } from "svelte/internal";
+
+let height;
+let width;
+
+//number of icons to color in to visualize percent
+let percentNumber = 5;
+
+//variables for the font family, and some colors
+let fontFamily = "helvetica";
+let bonhommeFill = "black";
+let bonhommeFillActive = "#048D14";
+let svgBackgroundColor = '#00000';
+
+let numRows = 8;
+let numCols = 13;
+
+let data = d3.range(numCols*numRows);
+    console.log(data);
+
+//x and y axis scales
+let y = d3.scaleBand()
+		.range([0, 950])
+		.domain(d3.range(numRows));
+
+let x = d3.scaleBand()
+		.range([0, 1200])
+		.domain(d3.range(numCols));
       
 let currentStep;
 let steps = [
@@ -16,10 +47,34 @@ let steps = [
 
 <section class="section">
     <div id="perso-left" class="chart">
-            <h1>
+            <h1 id="title-population">
                 pourcentage de population active
             </h1>
-            <img src="./images/bonhomme_tous-12.svg" alt="pacte" width="27%" />
+            <div id='grid-container'>
+                <div id='grid-chart'>
+                    <svg width="1200" height="1000" >
+                        <def>
+                            <g id="bonhomme">
+                                <path d={pathBonhomme}
+                                transform="translate(0,-220) scale(1.35)">
+                                </path>
+                            </g>
+                        </def>
+                    
+                        <g>
+                            {#each data as d}
+                            <use href="#bonhomme"
+                                 id="id = {d}"
+                                 x={ x(d%numCols)}
+                                 y={ y(Math.floor(d/numCols))}
+                                 fill={d < percentNumber ? bonhommeFillActive : bonhommeFill}></use>
+                            {/each}
+
+                        </g>
+
+                    </svg>
+                </div>
+            </div>
     </div>
     <div>
         <Scroll bind:value={currentStep}>
@@ -51,9 +106,9 @@ let steps = [
       height: 90vh;
       display: flex;
       place-items: center;
-      justify-content: center;
-      margin-right: 45%;
-      margin-left: 3%;
+      justify-content: left;
+      margin-right: 50%;
+      margin-left: 6%;
     }
   
     .step-content {
@@ -62,7 +117,7 @@ let steps = [
       padding: .5rem 1rem;
       transition: background 500ms ease, color 500ms ease;
       box-shadow: 1px 1px 10px rgba(0, 0, 0, .2);
-      flex-basis: 75%;
+      flex-basis: 50%;
       border-radius: 10px;
     }
   
@@ -76,11 +131,19 @@ let steps = [
     width: 100%;
     height: 100%;
     position: sticky;
-    top: 10%;
+    top: 5%;
     margin: auto;
     z-index: -100;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
+  }
+
+  #title-population {
+    flex-basis: 25%;
+    margin-left: 5%;
+  }
+  #grid-container {
+    flex-basis: 65%;
   }
     </style>

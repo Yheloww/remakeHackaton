@@ -4,7 +4,7 @@
     import { tweened } from "svelte/motion";
     import { cubicOut, elasticOut } from 'svelte/easing';
     import {fade, fly} from 'svelte/transition';
-  import { each } from 'svelte/internal';
+    import { each } from 'svelte/internal';
 
     let width = 1000;
     let height = 1000;
