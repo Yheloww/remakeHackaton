@@ -4,7 +4,7 @@
     import { tweened } from "svelte/motion";
     import { cubicOut, elasticOut } from 'svelte/easing';
     import {fade, fly} from 'svelte/transition';
-    import { each } from 'svelte/internal';
+    import { each, text } from 'svelte/internal';
 
     let width = 1000;
     let height = 1000;
@@ -16,6 +16,8 @@
     let WalSticker = false;
     let FlaSticker = false;
     let totalText = false;
+    let exist= false;
+    $: change_text = '';
 
     $: xScale = d3.scaleLinear()
     .domain([0,100])
@@ -39,6 +41,8 @@
         BxlSticker = false;
         FlaSticker = false;
         totalText = false;
+        exist=true;
+        change_text= "Bien essayé… En réalité, c’est la Flandre qui arrive en première position. Mais la différence entre les trois régions est assez faible."
     };
 
     const step3 = function () {
@@ -47,6 +51,8 @@
         BxlSticker = false;
         FlaSticker = true;
         totalText = false;
+        exist=true
+        change_text = "Bien joué ! Mais en réalité, la différence entre les trois régions est assez faible."
     };
 
     const step4 = function () {
@@ -55,6 +61,8 @@
         BxlSticker = false;
         FlaSticker = false;
         totalText = true;
+        exist=true;
+        change_text="La différence entre les régions est donc minime, mais il apparaît clairement qu’elles doivent chacune faire un effort afin d’augmenter la proportion de cours qui abordent les enjeux climatiques dans l’enseignement supérieur.";
     };
 
     const step1 = function () {
@@ -63,6 +71,8 @@
         BxlSticker = true;
         FlaSticker = false;
         totalText = false;
+        exist=true;
+        change_text="";
     };
 
     function custom(node, params) {
@@ -95,12 +105,13 @@
         <button class="btn-3" on:click={step3}><span>Flandre</span></button>
         <button class="btn-4" on:click={step4}><span>total</span></button>
     </div>
+    {#if exist}
     <div class="raltive-p">
         {#if WalSticker}
         <img class="wallonie" width="10%" src="./images/wallonie-08.svg" alt ="wallonie"transition:custom= {{}}/>
         {/if}
         {#if FlaSticker}
-    >   <img class="flandre" width="10%" src="./images/flandre-09.svg" alt ="wallonie"transition:custom= {{}}/>
+        <img class="flandre" width="10%" src="./images/flandre-09.svg" alt ="wallonie"transition:custom= {{}}/>
         {/if}
         {#if totalText}
         <p class="total" transition:custom= {{}}>Ce cercle vert correspond à 100% des cours</p>
@@ -110,18 +121,20 @@
         {/if}
     </div>
     <div class="container">
+        <p class="change-test">{change_text}</p>
         <svg width={width} height={plotH}>
             {#each data as circle, index}
             <circle 
                 cx={width/2} 
                 cy={plotH/2}
-                r={xScale($tweenedX[index])} 
+                r={xScale($tweenedX[index] )+20} 
                 fill="none" 
                 stroke={ $tweenedX[index] >= 100 ? "green" : "black"}
                 stroke-width={ $tweenedX[index] > 118 ? "0px" : "3px"}
                 transition:fade={{duration : 600}}/>
             {/each}
     </div>
+    {/if}
 </section>
 
 
@@ -136,7 +149,7 @@
         justify-content: center;
         flex-direction: column;
         align-items: center;
-        width: 75%;
+        width: 80%;
         margin: 0 auto;
     }
     .section {
@@ -189,9 +202,15 @@
     .total {
         position: absolute;
         top: 50vh;
-        left: 40.5vw;
+        left: 43%;
         text-align: center;
-        width: 20%;
+        width: 15%;
       
+    }
+
+    .change-test {
+        text-align: center;
+        margin-left: 25%;
+        margin-right: 25%;
     }
     </style>
