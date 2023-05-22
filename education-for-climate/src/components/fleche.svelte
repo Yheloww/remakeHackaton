@@ -87,10 +87,11 @@
     justify-content: space-around;
     width: 100%;
     align-items: center;
+    flex-basis: 75%;
   }
 
   .base {
-    flex-basis: 30%;
+    flex-basis: 25%;
   
   }
 
@@ -112,9 +113,9 @@
 
   #fleche-img {
     translate: -250px 325px;
-    rotate: 0deg;
+    rotate: 90deg;
     margin-bottom: 300px;
-    transform-origin: 530px 85px;
+    transform-origin: 300px 85px;
 
   }
     </style>
