@@ -15,6 +15,8 @@
     import BonhomeTest from '../components/bonhome-test.svelte';
 </script>
 
+<head>Education for climate</head>
+
 <Chapeau/>
 
 <Question1/>

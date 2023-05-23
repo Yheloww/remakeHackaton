@@ -19,8 +19,8 @@
 <section id="flech">
   <div class="chart">
     <div class="img-fleche center">
-      <img  transition:custom= {{ duration : 600}} src="./images/fleche.svg" alt="fleche" width="35%" id="fleche-img"/>
-      <img src="./images/demi-rond.svg" alt="fleche" width="50%" id="graphique-HE-U"/>
+      <img  transition:custom= {{ duration : 600}} src="./images/fleche.svg" alt="fleche" width="25%" id="fleche-img" class="rotate"/>
+      <img src="./images/demi-rond.svg" alt="fleche" width="40%" id="graphique-HE-U"/>
      </div>
       <div class="text">
           <p class="base">L’asbl The Shifters Belgium, qui promeut l’éducation sur le climat dans l’enseignement supérieur belge, a mené en 2022 une enquête auprès de 600 étudiants. 87% de ceux-ci pensent que « les universités belges doivent dispenser des modules d’enseignement sur le changement climatique ». </p>
@@ -84,7 +84,7 @@
   .text {
     display: flex;
     flex-direction: row-reverse;
-    justify-content: space-around;
+    justify-content: center;
     width: 100%;
     align-items: center;
     flex-basis: 75%;
@@ -98,10 +98,15 @@
   h1 {
     margin-top: 0;
     margin-bottom: 0;
+    justify-self: right;
   }
   p{
     margin-top: 0;
     margin-bottom: 0;
+  }
+  #fleche-img {
+    margin-top:17%;
+    margin-right: 25%;
   }
 
   .transparent {
@@ -111,11 +116,21 @@
     position: absolute;
   }
 
-  #fleche-img {
-    translate: -250px 325px;
-    rotate: 90deg;
-    margin-bottom: 300px;
-    transform-origin: 300px 85px;
+  @keyframes rotate {
+    from {
+      transform: rotate(0);
+    }
+    50% {
+      transform: rotate(156.6deg)
+    }
+    to {
+      transform: rotate(0deg);
+    }
+  }
 
+  .rotate {
+    animation: rotate 6s infinite both;
+
+    transform-origin: center right;
   }
     </style>

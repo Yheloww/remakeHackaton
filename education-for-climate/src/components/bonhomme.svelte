@@ -65,6 +65,7 @@ $: percent = 5;
         year="2045";
     }
     if (currentStep >= 2) {
+        percent=50;
         year="2060";
     }
   }

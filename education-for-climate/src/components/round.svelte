@@ -171,6 +171,7 @@
         color: #048D14;
         transform: skew(5deg);
         text-decoration: none;
+        transition: all 0.5s;
     }
     
     button > span {
@@ -180,6 +181,7 @@
     button:hover {
         background-color: #048D14;
         color: white;
+        transform: translate(0,-5px);
     }
 
     .bruxelles {

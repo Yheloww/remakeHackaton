@@ -74,7 +74,7 @@ function handleClick() {
         margin-bottom: 5%;
     }
     .section {
-      margin-top: 39%;
+      margin-top: 42%;
     }
 
     .input-section{
@@ -110,6 +110,7 @@ function handleClick() {
         transform: skew(5deg);
         text-decoration: none;
         width: 50%;
+        transition: all 0.5s;
     }
     
     button > span {
@@ -117,8 +118,14 @@ function handleClick() {
         transform: skew(-5deg);
     }
     button:hover {
+        transform: translate(0,-5px);
         background-color: #048D14;
         color: white;
+        text-decoration: none;
+    }
+    button:focus {
+      transform:translate(0,5px);
+      text-decoration: none;
     }
 
     input[type=range]:focus {
