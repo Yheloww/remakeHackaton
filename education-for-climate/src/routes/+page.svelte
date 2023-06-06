@@ -13,35 +13,50 @@
     import Fleche from '../components/fleche.svelte';
     import Solution from '../components/solution.svelte';
     import BonhomeTest from '../components/bonhome-test.svelte';
+
+    $: height = 1000;
+    $: width = 1000;
+
 </script>
 
+<svelte:window bind:innerHeight={height} bind:innerWidth={width}/>
 <head>Education for climate</head>
+<div class="wrapper" width={width}>
+    <Chapeau/>
 
-<Chapeau/>
+    <Question1/>
+    
+    <Pacte/>
+    
+    <Bonhomme/>
+    
+    <Round/>
+    
+    <DifferenceHe/>
+    
+    <Fleche/>
+    
+    <Solution/>
+</div>
 
-<Question1/>
-
-<Pacte/>
-
-<Bonhomme/>
-
-<Round/>
-
-<DifferenceHe/>
-
-<Fleche/>
-
-<Solution/>
 
 <div id="footer">
     <img id="footer" src="./images/titre_footer-01.svg" alt="différence ue unif" width="100%"/>
 </div>
 <style>
-    :global(section){
-    margin-bottom: 10%;
-}
+
 
 #footer {
     margin:0 auto;
+}
+
+@media( max-width: 600px){
+    :global(p) {
+        font-size: 1rem;
+    }
+    :global(h1) {
+        font-size: 1rem;
+    }
+
 }
 </style>

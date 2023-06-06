@@ -7,11 +7,12 @@ import { onMount } from "svelte";
 import { each } from "svelte/internal";
 import { tweened } from "svelte/motion";
 
-let height;
-let width;
+let height = 1000;
+let width = 1000;
 let currentStep;
 let step;
 $: year = 2022;
+
 
 
 let fontFamily = "helvetica";
@@ -26,12 +27,12 @@ let data = d3.range(numCols*numRows);
 data.splice(data.length - 4)
 console.log(data.length)
 //x and y axis scales
-let y = d3.scaleBand()
-		.range([0, 950])
+$: y = d3.scaleBand()
+		.range([0, width])
 		.domain(d3.range(numRows));
 
-let x = d3.scaleBand()
-		.range([0, 1200])
+$: x = d3.scaleBand()
+		.range([height,0])
 		.domain(d3.range(numCols));
       
 let steps = [
@@ -73,15 +74,14 @@ $: percent = 5;
 </script>
 
 
-
+<svelte:window bind:innerHeight={height} bind:innerWidth={width}/>
 <section class="section">
     <div id="perso-left" class="chart">
             <h1 id="title-population">
                 pourcentage de population active
             </h1>
-            <div id='grid-container'>
                 <div id='grid-chart'>
-                    <svg width="1200" height="1000" >
+                    <svg width="{width}" height="{height}" >
                         <def>
                             <g id="bonhomme">
                                 <path d={pathBonhomme}
@@ -107,7 +107,6 @@ $: percent = 5;
                         transition:fade={{duration: 600}}>{year}</h1>
                 </div>
             </div>
-    </div>
     <div>
         <Scroll bind:value={currentStep}>
             {#each steps as text, i}
@@ -181,13 +180,20 @@ $: percent = 5;
 
   #sticker {
     position: absolute;
-    left: 73%;
-    top: 83%;
+    /* left: 73%;
+    top: 83%; */
     font-size: 6rem;
     background-color: #048D14;
     color:#F9F8F4;
     padding: 1%;
     padding-bottom: 0%;
     transform: rotate(-5deg);
+  }
+
+  @media (min-width:600px) {
+    .chart {
+        display: flex;
+        flex-direction: column;
+    }
   }
     </style>

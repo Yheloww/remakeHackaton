@@ -215,4 +215,10 @@
         margin-left: 25%;
         margin-right: 25%;
     }
+
+    @media (max-width: 600px) {
+    .section {
+      flex-direction: column;
+    }
+  }
     </style>

@@ -133,4 +133,10 @@
 
     transform-origin: center right;
   }
+
+  @media (max-width: 600px) {
+    .text {
+      flex-direction: column;
+    }
+  }
     </style>
