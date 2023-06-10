@@ -25,17 +25,17 @@
     <Chapeau/>
 
     <Question1/>
-    
+
     <Pacte/>
-    
+
     <Bonhomme/>
-    
+            
     <Round/>
     
     <DifferenceHe/>
-    
+
     <Fleche/>
-    
+        
     <Solution/>
 </div>
 

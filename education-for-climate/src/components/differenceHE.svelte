@@ -55,35 +55,14 @@
 </section>
 
 <style>
-  
-    .center {
-        margin: 20px;
-        display: flex;
-        justify-content: center;
-        flex-direction: column;
-        align-items: center;
-        width: 75%;
-        margin: 0 auto;
+    section {
+        margin-inline: 1rem;
     }
-    
-    .section {
-        display: flex;
-        justify-content:space-evenly;
-        flex-direction: row;
-        align-items: top;
-        width: 100%;
-
-    }
-    
-    .half-section {
-        flex-basis: 25%;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
+    h1 {
+        text-align: center;
     }
 
     button {
-        margin-top: 10%;
         font-size: medium;
         font-family: 'Avara-black';
         text-transform: uppercase;
@@ -103,16 +82,6 @@
     button:hover {
         background-color: #048D14;
         color: white;
-        transform: translate(0,-5px);
-    }
-
-    .HE-btn {
-        margin-right: 5%;
-    }
-
-    p {
-        margin-left: 10%;
-        margin-top: 15%;
     }
 
     </style>

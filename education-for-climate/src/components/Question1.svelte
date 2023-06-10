@@ -24,16 +24,8 @@ function handleClick() {
 
 
 <section id="question-1" class="section">
-    <div id="Q1-right-section" class="half-section">
-            {#if answer}
-            <h1 class="big"  transition:fly="{{ x: -500, duration: 2000 }}">3.9%</h1>
-            <p transition:fly="{{ x: -500, duration: 2000 }}"> {response} </p>
-            <p transition:fly="{{ x: -500, duration: 2000 }}"> <b>{answer}</b> </p>
-            {/if}
-      
-    </div>
     <div id="Q1-left-section" class="half-section">
-        <h1 style="margin-right:25%;">
+        <h1>
             Quel pourcentage de cours dans les universités et hautes écoles belges traite des enjeux climatiques?
         </h1>
         <div class="input-section">
@@ -47,55 +39,42 @@ function handleClick() {
             <button on:click={handleClick} class="tiny"><span>confirmer</span></button>
             
         </div>
+
+        <div id="Q1-right-section" class="half-section">
+          {#if answer}
+          <p transition:fly="{{ x: -500, duration: 2000 }}"> {response} </p>
+          <h1  transition:fly="{{ x: -500, duration: 2000 }}" class="big">3.9%</h1>
+          <p transition:fly="{{ x: -500, duration: 2000 }}"> <b>{answer}</b> </p>
+          {/if}
+    
+  </div>
        
     </div>
 </section>
 
 <style>
 
-    /* div {
-        border: 2px solid red;
-    } */
-    #Q1-left-section{
-        display: flex;
-        margin-left: 50%;
-        flex-direction: column;
-        justify-content:space-around;
-
-    }
-    
-    #Q1-right-section {
-        position: absolute;
-        margin-left: 15%;
-        width: 25%;
-    }
-    .tiny {
-        margin-top: 5%;
-        margin-bottom: 5%;
-    }
-    .section {
-      margin-top: 42%;
+    h1{
+      text-align: center;
     }
 
-    .input-section{
-        margin-top: 2%;
-        display: flex;
-        flex-direction: column;
-        flex-basis: 50%;
-        padding-right: 50%;
+    section {
+      margin-inline: 1rem;
+    }
+    .input-section {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
     }
 
-   .slider {
-    display: flex;
-    width: 100%;
-    text-align: center;
-   }
+    .big {
+      font-size: 7rem;
+    }
 
-   #text-div {
-    width: 20%;
-   }
 
-   button {
+
+
+    button {
         margin-right: 30px;
         margin-top: 1%;
         font-size: medium;
@@ -112,7 +91,7 @@ function handleClick() {
         width: 50%;
         transition: all 0.5s;
     }
-    
+
     button > span {
         display: inline-block;
         transform: skew(-5deg);
@@ -128,10 +107,12 @@ function handleClick() {
       text-decoration: none;
     }
 
+
     input[type=range]:focus {
   outline: none;
-}
-input[type=range]::-webkit-slider-runnable-track {
+  }
+  
+  input[type=range]::-webkit-slider-runnable-track {
   width: 100%;
   height: 26px;
   cursor: pointer;
@@ -160,7 +141,7 @@ input[type=range]::-moz-range-track {
   border-radius: 24px;
   border: 4px solid #000000;
 }
-input[type=range]::-moz-range-thumb {
+    input[type=range]::-moz-range-thumb {
   box-shadow: 0px 0px 1px #000000;
   border: 1px solid #000000;
   height: 23px;
@@ -187,7 +168,7 @@ input[type=range]::-ms-fill-upper {
   border: 2px solid #000000;
   border-radius: 48px;
 }
-input[type=range]::-ms-thumb {
+    input[type=range]::-ms-thumb {
   margin-top: 1px;
   box-shadow: 0px 0px 1px #000000;
   border: 1px solid #000000;
@@ -200,4 +181,6 @@ input[type=range]::-ms-thumb {
 input[type=range]:focus::-ms-fill-lower {
   background: #FFFFFF;
 }
+  
+
     </style>

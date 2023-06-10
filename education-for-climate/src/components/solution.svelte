@@ -26,43 +26,12 @@
 </section>
 
 <style>
-    .center {
-        margin: 20px;
-        display: flex;
-        justify-content: center;
-        flex-direction: column;
-        align-items: center;
+
+    section {
+        margin-inline: 1rem;
     }
-    
-    .section {
-        display: flex;
-        justify-content:space-evenly;
-        flex-direction: row;
-        align-items: top;
-        margin-top: 5%;
-        margin-bottom: 15%;
-    }
- 
-    .third-section {
-        flex-basis: 20%;
-        display: flex;
-        flex-direction: column;
-    }
-    #header-solution {
-        width: 50%;
-        margin: 0 auto;
+    h1 {
+        text-align: center;
     }
 
-    img {
-        margin-bottom: 10%;
-    }
-
-    .final-text {
-        width: 50%;
-        margin-left: 10%;
-    }
-
-    .conclusion {
-        font-size: 1.5rem;
-    }
     </style>

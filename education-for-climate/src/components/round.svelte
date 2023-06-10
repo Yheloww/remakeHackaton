@@ -6,8 +6,8 @@
     import {fade, fly} from 'svelte/transition';
     import { each, text } from 'svelte/internal';
 
-    let width = 1000;
-    let height = 1000;
+    let width = 300;
+    let height = 300;
 
     let plotW = (width/100)*60;
     let plotH = (height/100)*60;
@@ -97,7 +97,7 @@
 </script>
 
 <svelte:window bind:innerHeight={height} bind:innerWidth={width}/>
-<section  style="width={width}; height:{height}" class="test">
+<section class="test">
     <h1 class="center">Dans quelle région les universités et hautes écoles proposent-elles la plus grande poportion de cours traitant des enjeux climatiques ?</h1>
     <div class="bnt-region section">
         <button class="btn-1" on:click={step1}><span>Bruxelles</span></button>
@@ -121,46 +121,40 @@
         {/if}
     </div>
     <div class="container">
-        <p class="change-test">{change_text}</p>
-        <svg width={width} height={plotH}>
+        <svg width={width} height=300>
             {#each data as circle, index}
             <circle 
                 cx={width/2} 
-                cy={plotH/2}
+                cy={300/2}
                 r={xScale($tweenedX[index] )+20} 
                 fill="none" 
                 stroke={ $tweenedX[index] >= 100 ? "green" : "black"}
                 stroke-width={ $tweenedX[index] > 118 ? "0px" : "3px"}
                 transition:fade={{duration : 600}}/>
             {/each}
+            </svg>
+            <p class="change-test">{change_text}</p>
+
     </div>
     {/if}
 </section>
 
 
 <style>
-    .raltive-p {
-        position: relative;
+    h1 {
+        text-align: center;
     }
-    
-    .center {
-        margin: 10px;
-        display: flex;
-        justify-content: center;
-        flex-direction: column;
-        align-items: center;
-        width: 80%;
-        margin: 0 auto;
-    }
-    .section {
-        display: flex;
-        justify-content:center;
+
+    .bnt-region {
+        display:flex;
         flex-direction: row;
-        align-items: top;
+        flex-wrap: wrap;
+        gap: 0.5rem;
+        justify-content: center;
     }
+
     button {
-        margin-left: 30px;
-        margin-right: 30px;
+      
         margin-top: 1%;
         font-size: medium;
         font-family: 'Avara-black';
@@ -181,44 +175,6 @@
     button:hover {
         background-color: #048D14;
         color: white;
-        transform: translate(0,-5px);
     }
 
-    .bruxelles {
-        position: absolute;
-        top: 20vh;
-        left: 60vw;
-    }
-    
-    .wallonie {
-        position: absolute;
-        top: 30vh;
-        left: 32vw;
-    }
-    .flandre {
-        position: absolute;
-        top: 32vh;
-        left: 60vw;
-    }
-
-    .total {
-        position: absolute;
-        top: 50vh;
-        left: 43%;
-        text-align: center;
-        width: 15%;
-      
-    }
-
-    .change-test {
-        text-align: center;
-        margin-left: 25%;
-        margin-right: 25%;
-    }
-
-    @media (max-width: 600px) {
-    .section {
-      flex-direction: column;
-    }
-  }
     </style>

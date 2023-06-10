@@ -19,17 +19,13 @@
                 Le pacte vert pour l'Europe
             </h1>
         </div>
-        <img id="img-pacte" src="./images/pacte.svg" alt="pacte" width="75%"/>
+        <img id="img-pacte" src="./images/pacte.svg" alt="pacte" width="100%"/>
     </div>
       <Scroll bind:value={currentStep}>
           {#each steps as text, i}
               <div class="step" class:active={currentStep === i}>
                   <div class="step-content">
-                      {#if currentStep == 4}
-                      <img transition:fly="{{ x: -500, duration: 2000 }}" src="{text}" alt="">
-                      {:else}
                       <p>{text}</p>
-                      {/if}
                   </div>
               </div>
           {/each}
@@ -49,7 +45,6 @@
       display: flex;
       place-items: center;
       justify-content: center;
-      margin-left: 50%;
     }
   
     .step-content {
@@ -81,11 +76,7 @@
         opacity: 0.5;
 }
 
-    .title {
-        display: flex;
-        justify-content: center;
-        margin-left: 40%;
-        width: 40%;
-
-    }
+.title {
+  text-align: center;
+}
   </style>

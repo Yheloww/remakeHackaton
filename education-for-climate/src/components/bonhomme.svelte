@@ -7,8 +7,8 @@ import { onMount } from "svelte";
 import { each } from "svelte/internal";
 import { tweened } from "svelte/motion";
 
-let height = 1000;
-let width = 1000;
+$: height = 1000;
+$: width = 1000;
 let currentStep;
 let step;
 $: year = 2022;
@@ -20,19 +20,19 @@ let bonhommeFill = "black";
 let bonhommeFillActive = "#048D14";
 let svgBackgroundColor = '#00000';
 
-let numRows = 8;
-let numCols = 13;
+let numRows = 10;
+let numCols = 10;
 
 let data = d3.range(numCols*numRows);
-data.splice(data.length - 4)
+data.splice(data.length)
 console.log(data.length)
 //x and y axis scales
 $: y = d3.scaleBand()
-		.range([0, width])
+		.range([0, 500])
 		.domain(d3.range(numRows));
 
 $: x = d3.scaleBand()
-		.range([height,0])
+		.range([370,0])
 		.domain(d3.range(numCols));
       
 let steps = [
@@ -59,7 +59,7 @@ $: percent = 5;
     $: {
     if (currentStep == 0) {
         percent=5;
-        year="2022";
+        year="Aujourd'hui";
     }
     if (currentStep == 1) {
         percent=33;
@@ -81,11 +81,11 @@ $: percent = 5;
                 pourcentage de population active
             </h1>
                 <div id='grid-chart'>
-                    <svg width="{width}" height="{height}" >
+                    <svg width=360 height=500>
                         <def>
                             <g id="bonhomme">
                                 <path d={pathBonhomme}
-                                transform="translate(0,-220) scale(1.35)">
+                                transform="translate(-10,-105) scale(0.58)">
                                 </path>
                             </g>
                         </def>
@@ -102,7 +102,6 @@ $: percent = 5;
                         </g>
                     </svg>
                     <h1 id="sticker" 
-                        class="big" 
                         step={currentStep} 
                         transition:fade={{duration: 600}}>{year}</h1>
                 </div>
@@ -122,24 +121,35 @@ $: percent = 5;
 
 
 <style>
-    section {
-        margin-bottom: 10%;
-    }
-    
-    .section {
-        display: flex;
-        justify-content:space-evenly;
-        flex-direction: column;
-        align-items: top;
-    }
 
-    .step {
+section {
+    margin-bottom: 3rem;
+}
+
+#sticker {
+    font-size: "Avara-black";
+    background-color: green;
+    color: white;
+    margin-inline: 6rem;
+    padding: 0.25rem;
+    font-size: 1.8rem;
+    position: absolute;
+    bottom: -3rem;
+    left: -3.5rem;
+    padding-top:0.7rem
+}
+h1 {
+    text-align: center;
+    margin-inline: 2rem;
+    font-size: 1.2rem;
+
+}
+
+.step {
       height: 90vh;
       display: flex;
       place-items: center;
-      justify-content: left;
-      margin-right: 50%;
-      margin-left: 6%;
+      justify-content: center;
     }
   
     .step-content {
@@ -148,7 +158,7 @@ $: percent = 5;
       padding: .5rem 1rem;
       transition: background 500ms ease, color 500ms ease;
       box-shadow: 1px 1px 10px rgba(0, 0, 0, .2);
-      flex-basis: 50%;
+      flex-basis: 75%;
       border-radius: 10px;
     }
   
@@ -157,43 +167,13 @@ $: percent = 5;
           color: black;
       }
 
-    .chart {
+      .chart {
     background: #F9F8F4;
     width: 100%;
     height: 100%;
     position: sticky;
-    top: 5%;
+    top: 10%;
     margin: auto;
     z-index: -100;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
   }
-
-  #title-population {
-    flex-basis: 25%;
-    margin-left: 5%;
-  }
-  #grid-container {
-    flex-basis: 65%;
-  }
-
-  #sticker {
-    position: absolute;
-    /* left: 73%;
-    top: 83%; */
-    font-size: 6rem;
-    background-color: #048D14;
-    color:#F9F8F4;
-    padding: 1%;
-    padding-bottom: 0%;
-    transform: rotate(-5deg);
-  }
-
-  @media (min-width:600px) {
-    .chart {
-        display: flex;
-        flex-direction: column;
-    }
-  }
-    </style>
+</style>
